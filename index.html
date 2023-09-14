@@ -1,38 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>To-DoList-Prototype</title>
-  <link rel="stylesheet" href="Todo-List.css">
-  <style>
-  
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDoLists</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/7c4dc178f1.js" crossorigin="anonymous"></script>
+
 </head>
 <body>
-
-   <h1>Todo-List Final Version</h1>
-    <div>
-      <p>Todo List-final</p>
-
-      <div class="todo-input-grid">
-      <input class="js-name-input3 name-input" type="text" placeholder="ToDo-name">
-      <input type="date" class="js-due-date-input due-date-input" >
-      <button onclick="
-       addTodo3();
-      " class="add-todo-button">Add</button>
+    <h1>TODo List</h1>
+    <!-- mani is for the container for the to do list -->
+    <main>
+      <!-- section for the adding input to the task list -->
+      <section class="inputContainer">
+        <i class="fa-solid fa-scroll"></i>
+        <input type="text" placeholder="Add a task" data-task="input" id="input" class="inputData" required>
+        <!-- <button id="but"><i class="fa fa-plus-circle add" aria-hidden="true"></i></button> -->
+      </section>
+      <i class="fa-solid fa-check-double dobCheck" style="color: #828282;"></i><span>completed all tasks</span>
+      <div class="space"></div>
+      <span class="deltAll">Clear completed</span>
+      <hr>
+  
+      <!-- this unordered list for get a list that gets in order and mark as check and delete -->
+      <ul id="list">
+        <!-- <li>
+          <input type="checkbox">
+          <label for="task1">Buy Groceries</label>
+          <button>
+            <i class="fa fa-trash-o" aria-hidden="true"></i>
+          </button>
+        </li> -->
+      </ul>
+      <hr>
+      <div class="complete">
+        <p>Total tasks left:<span id="taskCount">0</span></p>
+        <span class="incomplete" style="margin-left: 0px;">Incomplete</span>
+        <span class="completed">Completed</span>
       </div>
-      <div class="js-todo-list1 todo-grid">
-        
-      </div>
-
-  </div>
-
-<script src="ToDo-list.js">
-
-
-
-</script>
-
+  
+      <script src="scripts.js"></script>
+    </main>
 </body>
 </html>
